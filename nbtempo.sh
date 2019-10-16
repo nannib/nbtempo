@@ -94,7 +94,7 @@ fi
 
 sudo mactime -b $dr/times.txt -d $fdate..$todate | tee $dr/report-$fdate-$todate.csv | yad  --progress --title "time line creating - WAIT!!!"  --width=600 --rtl --auto-close --auto-kill 
 
-if [ $? == 0 ]; then
+if [ $? = 0 ]; then
 	yad  --width 600 \--title "nbtempo" --text "Operation succeeded!\n\nYour report is $dr"
 else
 	yad --width 600 --title "nbtempo" --text "NBTEMPO encountered errors.\n\nPlease check your settings and try again"
